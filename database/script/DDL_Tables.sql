@@ -1,0 +1,15 @@
+
+CREATE TABLE continents (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+
+
+CREATE TABLE county_flag (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+flag VARCHAR (100) NOT NULL,
+CONSTRAINT fk_continents
+    FOREIGN KEY (id) 
+        REFERENCES continents(id)
+);
